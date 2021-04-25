@@ -1,3 +1,0 @@
----
-- include_tasks: main_tasks.yml
-  loop: "{{ users }}"

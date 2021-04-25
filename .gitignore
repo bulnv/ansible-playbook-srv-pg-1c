@@ -1,6 +1,13 @@
 # Игнорировать файлы VSC
 *launch.json
 *.vscode
+*.rpm
+*.deb
+*.tar.gz
+license-tools/
+license-tools/*
+dist/
+dist/*
 
 # Игнорировать файлы Mac OS X
 .DS_Store

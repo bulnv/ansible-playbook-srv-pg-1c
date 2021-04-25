@@ -7,8 +7,13 @@ packages_for1c:
   - freetype
   - libgsf
   - unixODBC
+  - NetworkManager-libnm
+  - nm-connection-editor
+  - libsemanage-python
+  - policycoreutils-python
+  - "@development-tools"
 
-app1cversion: 8.3.17-1549
+
 app1carch: x86_64
 
 app1c_packages:
@@ -21,3 +26,33 @@ app1c_packages:
   # - 1C_Enterprise83-crs-{{ app1cversion }}.{{ app1carch }}.rpm
 
 app1c_packages_pattern: 1C_Enterprise83*
+
+yum_packages:
+  - htop
+  - iptraf
+  - lsof
+  - mtr
+  - iotop
+  - lnav
+  - 'zabbix40-agent.x86_64'
+  - snapd
+  - chrony
+  - mod_ssl
+
+net_office_ip: '188.186.176.253'
+net_zabbix_ip: '188.143.233.16'
+net_local_cidrs:
+  - "10.0.0.0/8"
+  - "172.16.0.0/16"
+net_remote_ips:
+  - "188.143.233.16"
+  - "5.45.71.55"
+  - "188.186.176.253"
+  - "79.122.202.25"
+  - "77.235.215.149"
+  - "5.61.59.207"
+net_pg_ips: []
+services:
+  - zabbix-agent
+  - httpd
+  - chronyd

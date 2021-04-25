@@ -1,33 +1,10 @@
-- hosts: selfhosted
+- hosts: srvlocal
+  gather_facts: true
   roles:
-    - hostname
-    - timezone
-    - locale
-    - epel
-    - upgrade
-    - cli-packages
-    - monitor-packages
-    - firewalld
-    - groups
-    - users
-    - oh_my_zsh
-    - config_omz
-    - secure 
-    - sshd_basic
-
-- hosts: docker
-  roles:
-    - docker
-    - docker-compose
-
-- hosts: sshd_nopass
-  roles:
-    - sshd_nopass
-
-- hosts: postgrespro
-  roles:
-    - postgrespro1c
-
-- hosts: app1c
-  roles:
+    # - hostname
+    # - timezone
+    # - epel
+    # - upgrade
+    # - firewalld
+    # - postgrespro1c
     - app1c
