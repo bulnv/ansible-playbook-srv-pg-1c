@@ -1,10 +1,10 @@
 - hosts: srvlocal
   gather_facts: true
   roles:
-    # - hostname
-    # - timezone
-    # - epel
-    # - upgrade
-    # - firewalld
-    # - postgrespro1c
+    - hostname
+    - timezone
+    - epel
+    - upgrade
+    - firewalld
+    - postgrespro1c
     - app1c

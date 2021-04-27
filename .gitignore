@@ -13,7 +13,7 @@ dist/*
 .DS_Store
 
 # Игнорировать файлы повторения проигрывания playbook
-*main.retry
+*.retry
 
 # Игнорировать файлы логов
 *ansible.log

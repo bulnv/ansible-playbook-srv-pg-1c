@@ -52,7 +52,7 @@
 
 - name: config 1540-1541 port firewalld
   firewalld:
-    port: 1540-1541/tcp
+    port: 1540-1542/tcp
     permanent: yes
     immediate: yes
     state: enabled

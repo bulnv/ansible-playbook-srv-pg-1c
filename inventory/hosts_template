@@ -1,7 +1,7 @@
 [selfhosted]
 srv1c server_hostname=srv1c ansible_host=10.211.55.16 ansible_ssh_user=root ansible_ssh_pass=1234 ansible_python_interpreter=/usr/libexec/platform-python
 srvdb server_hostname=srvdb ansible_host=10.211.55.15 ansible_ssh_user=root ansible_ssh_pass=1234 ansible_python_interpreter=/usr/libexec/platform-python
-srvlocal server_hostname=127.0.0.1 ansible_connection=local ansible_host=127.0.0.1
+srvlocal server_hostname=odins.parkdekor.ru ansible_connection=local ansible_host=127.0.0.1 
 
 [yandexcloud]
 

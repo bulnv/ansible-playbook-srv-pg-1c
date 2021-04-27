@@ -51,6 +51,7 @@ net_remote_ips:
   - "79.122.202.25"
   - "77.235.215.149"
   - "5.61.59.207"
+  - "77.242.109.1"
 net_pg_ips: []
 services:
   - zabbix-agent
