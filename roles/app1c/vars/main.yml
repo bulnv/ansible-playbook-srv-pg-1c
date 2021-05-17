@@ -38,6 +38,7 @@ yum_packages:
   - snapd
   - chrony
   - mod_ssl
+  - rclone
 
 net_office_ip: '188.186.176.253'
 net_zabbix_ip: '188.143.233.16'

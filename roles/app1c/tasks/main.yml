@@ -128,12 +128,26 @@
     group: root
     mode: 755
 
+- name: 'init reindex script'
+  template:
+    src: reindex.j2
+    dest: /root/pg_reindex.sh
+    group: root
+    mode: 755
+
 - name: 'bkp cron job'
   cron:
     name: "a job for backup pg"
     minute: "0"
     hour: "2"
     job: "/root/pg_backup.sh"
+
+- name: 'index cron job'
+  cron:
+    name: "a job for reindex pg"
+    minute: "0"
+    hour: "0"
+    job: "/root/pg_reindex.sh"
 
 - name: 'Vhosts file'
   template:
