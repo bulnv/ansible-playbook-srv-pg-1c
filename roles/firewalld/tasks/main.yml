@@ -34,3 +34,11 @@
     permanent: yes
     immediate: yes
     state: enabled
+
+- name: config 21 port ftp local
+  firewalld:
+    port: 21/tcp
+    permanent: yes
+    immediate: yes
+    state: enabled
+    zone: internal

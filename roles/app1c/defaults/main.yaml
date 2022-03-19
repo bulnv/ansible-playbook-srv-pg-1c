@@ -1,1 +1,5 @@
 app1cversion: 8.3.18.1289
+bases:
+  - pd
+  - zup
+  - upruchet

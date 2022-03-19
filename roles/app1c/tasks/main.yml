@@ -164,6 +164,12 @@
     enabled: yes
   loop: "{{ services }}"
 
+- name: 'add ftp user'
+  user:
+    name: ftpuser
+    create_home: true
+    shell: '/usr/sbin/nologin'
+
 
 - name: 'Reinstall 1c'
   block:
@@ -207,3 +213,30 @@
       name: srv1cv83
       state: started
   when: app1cversion != yum_installed.stdout
+
+- name: 'Create web folders'
+  file:
+    path: "/var/www/{{ item }}"
+    state: directory
+    group: apache
+    mode: 640
+  loop: "{{ bases }}"
+
+- name: 'Publish bases on a web server'
+  template:
+    src: 'default.vrd.j2'
+    dest: "/var/www/{{ item }}/default.vrd"
+    group: apache
+    mode: 640
+  loop: "{{ bases }}"
+
+- name: 'vsftpd conf'
+  template:
+    src: 'vsftpd.conf.j2'
+    dest: "/etc/vsftpd/vsftpd.conf"
+    mode: 640
+
+- name: start service srv1cv83
+  service:
+    name: srv1cv83
+    state: restarted

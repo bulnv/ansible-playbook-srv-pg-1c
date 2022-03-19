@@ -39,6 +39,7 @@ yum_packages:
   - chrony
   - mod_ssl
   - rclone
+  - vsftpd
 
 net_office_ip: '188.186.176.253'
 net_zabbix_ip: '188.143.233.16'
@@ -58,3 +59,4 @@ services:
   - zabbix-agent
   - httpd
   - chronyd
+  - vsftpd
